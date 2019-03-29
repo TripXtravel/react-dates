@@ -129,6 +129,7 @@ class CalendarDay extends React.PureComponent {
           modifiers.has('hovered-start-first-possible-end') && styles.CalendarDay__hovered_start_first_possible_end,
           modifiers.has('hovered-start-blocked-minimum-nights') && styles.CalendarDay__hovered_start_blocked_min_nights,
           modifiers.has('highlighted-calendar') && styles.CalendarDay__highlighted_calendar,
+          modifiers.has('flexible-calendar') && styles.CalendarDay__flexible_calendar,
           modifiers.has('blocked-minimum-nights') && styles.CalendarDay__blocked_minimum_nights,
           modifiers.has('blocked-calendar') && styles.CalendarDay__blocked_calendar,
           hoveredSpan && styles.CalendarDay__hovered_span,
@@ -221,6 +222,21 @@ export default withStyles(({ reactDates: { color, font } }) => ({
   },
 
   CalendarDay__highlighted_calendar: {
+    background: color.highlighted.backgroundColor,
+    color: color.highlighted.color,
+
+    ':hover': {
+      background: color.highlighted.backgroundColor_hover,
+      color: color.highlighted.color_active,
+    },
+
+    ':active': {
+      background: color.highlighted.backgroundColor_active,
+      color: color.highlighted.color_active,
+    },
+  },
+
+  CalendarDay__flexible_calendar: {
     background: color.highlighted.backgroundColor,
     color: color.highlighted.color,
 

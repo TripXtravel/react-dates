@@ -58,6 +58,7 @@ const propTypes = forbidExtraProps({
   firstDayOfWeekStyles: DayStyleShape,
   lastDayOfWeekStyles: DayStyleShape,
   highlightedCalendarStyles: DayStyleShape,
+  flexibleCalendarStyles: DayStyleShape,
   blockedMinNightsStyles: DayStyleShape,
   blockedCalendarStyles: DayStyleShape,
   blockedOutOfRangeStyles: DayStyleShape,
@@ -94,6 +95,16 @@ export const outsideStyles = {
 };
 
 export const highlightedCalendarStyles = {
+  background: color.highlighted.backgroundColor,
+  color: color.highlighted.color,
+
+  hover: {
+    background: color.highlighted.backgroundColor_hover,
+    color: color.highlighted.color_active,
+  },
+};
+
+export const flexibleCalendarStyles = {
   background: color.highlighted.backgroundColor,
   color: color.highlighted.color,
 
@@ -194,6 +205,7 @@ const defaultProps = {
   outsideStyles,
   todayStyles: {},
   highlightedCalendarStyles,
+  flexibleCalendarStyles,
   blockedMinNightsStyles,
   blockedCalendarStyles,
   blockedOutOfRangeStyles,
@@ -283,6 +295,7 @@ class CustomizableCalendarDay extends React.PureComponent {
       firstDayOfWeekStyles: firstDayOfWeekStylesWithHover,
       lastDayOfWeekStyles: lastDayOfWeekStylesWithHover,
       highlightedCalendarStyles: highlightedCalendarStylesWithHover,
+      flexibleCalendarStyles: flexibleCalendarStylesWithHover,
       blockedMinNightsStyles: blockedMinNightsStylesWithHover,
       blockedCalendarStyles: blockedCalendarStylesWithHover,
       blockedOutOfRangeStyles: blockedOutOfRangeStylesWithHover,
@@ -324,6 +337,7 @@ class CustomizableCalendarDay extends React.PureComponent {
           modifiers.has('hovered-start-first-possible-end') && getStyles(hoveredStartFirstPossibleEndStylesWithHover, isHovered),
           modifiers.has('hovered-start-blocked-minimum-nights') && getStyles(hoveredStartBlockedMinNightsStylesWithHover, isHovered),
           modifiers.has('highlighted-calendar') && getStyles(highlightedCalendarStylesWithHover, isHovered),
+          modifiers.has('flexible-calendar') && getStyles(flexibleCalendarStylesWithHover, isHovered),
           modifiers.has('blocked-minimum-nights') && getStyles(blockedMinNightsStylesWithHover, isHovered),
           modifiers.has('blocked-calendar') && getStyles(blockedCalendarStylesWithHover, isHovered),
           hoveredSpan && getStyles(hoveredSpanStylesWithHover, isHovered),
