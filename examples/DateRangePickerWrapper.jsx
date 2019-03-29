@@ -80,6 +80,7 @@ const defaultProps = {
   isDayBlocked: () => false,
   isOutsideRange: day => !isInclusivelyAfterDay(day, moment()),
   isDayHighlighted: () => false,
+  isDayFlexible: () => false,
 
   // internationalization
   displayFormat: () => moment.localeData().longDateFormat('L'),
