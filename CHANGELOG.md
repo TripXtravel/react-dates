@@ -1,11 +1,14 @@
 # Change Log
 
 <!--
-- []  ([#](https://github.com/airbnb/react-dates/pull/))
+- []  ([#](https://github.com/TripXtravel/react-dates/pull/))
 -->
 
+## 20.1.4
+- no changes; trying to publish.
+
 ## 20.1.3
-- [new] Add `isDayFlexible` functionality
+- [new] Add `isDayFlexible` functionality ([#117](https://github.com/TripXtravel/website-front/issues/117))
 
 ## 20.1.0
 - [new] Add `renderKeyboardShortcutsButton` prop ([#1576](https://github.com/airbnb/react-dates/pull/1576))
