@@ -306,10 +306,10 @@ export default class DayPickerRangeController extends React.PureComponent {
     }
 
     const recomputePropModifiers = (
-      recomputeOutsideRange || 
-      recomputeDayBlocked || 
-      recomputeDayHighlighted || 
-      recomputeDayFlexible
+      recomputeOutsideRange
+      || recomputeDayBlocked
+      || recomputeDayHighlighted
+      || recomputeDayFlexible
     );
 
     const didStartDateChange = startDate !== prevStartDate;
