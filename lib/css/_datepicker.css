@@ -336,6 +336,15 @@
   background: #ffce71;
   color: #484848
 }
+.CalendarDay__flexible_calendar {
+  background: #ffe8bc;
+  color: #484848
+}
+.CalendarDay__flexible_calendar:active,
+.CalendarDay__flexible_calendar:hover {
+  background: #ffce71;
+  color: #484848
+}
 .CalendarDay__selected_span {
   background: #66e2da;
   border: 1px double #33dacd;
